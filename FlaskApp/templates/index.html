@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No plate recognition</title>
+    <style>
+        #head{
+            padding:10px ;
+            font-size: 35px;
+            background-color: rgb(43, 75, 255);
+            text-align: center;
+            color: cornsilk;
+        }
+        #container{
+            align-items: center;
+            padding: 10px;
+            background: center/cover no-repeat url("/static/Cover-1024x478.png");
+            height: 700px;
+            color: cornsilk;
+        }
+        #form{
+            margin-top: 100px;
+            margin-left: 450px;
+            font-size: 20px;
+        }
+        #name{
+            width:300px;
+        }
+        #sb{
+            width:100px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: 200px;
+            border: 5px solid rgb(7, 8, 7);
+            border-radius: 10px;
+            background-color: rgb(47, 255, 203);
+        }
+        #sb:hover{
+            cursor: pointer;
+            background-color: rgb(0, 140, 255);
+        }
+        #image{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="head">RTO-FETCHER WEB APPLICATION</div>
+    <div id="container">
+        <form action="{{url_for('fetch')}}" method="POST" id="form" enctype="multipart/form-data" > 
+            <h1 id="heading center">NUMBER PLATE RECOGNITION</h1>
+            ENTER YOUR NAME: <input type="text" id="name" placeholder="enter your name">
+            </br>
+            CHOOSE FILE <input type="file" name="file" id="fi">
+            </br>
+            <input type="submit" value="SUBMIT" id="sb">
+        </form>
+    </div>
+</body>
+
+</html>
